@@ -1,0 +1,53 @@
+/*
+ * 主题变量设置
+ *
+ * 覆盖操作在webpack中进行配置，因为使用了按需加载
+ */
+
+// 包含antd变量与自定义变量
+@primary-color: #366df4;
+@success-color: #02c58d;
+@processing-color: @primary-color;
+@error-color: #e85254;
+@warning-color: #f7b500;
+
+@white: #fff;
+@black: #000;
+
+@text-color: #333;
+@text-color-secondary: #666;
+@text-color-lesser: #999; // 自定义三级信息颜色
+
+@font-family: 'PingFang SC', -apple-system, 'Helvetica Neue', Helvetica, BlinkMacSystemFont,
+  'Microsoft YaHei', tahoma, Arial, 'Open Sans', 'Hiragino Sans GB', 'Heiti SC',
+  'WenQuanYi Micro Hei', sans-serif;
+@background-color-light: #f6f7fb;
+@layout-body-background: #eff2f7;
+
+// card
+@card-head-color: @text-color;
+@card-padding-base: 20px;
+@card-radius: 8px;
+
+// border
+@border-color-split: #f4f4f4;
+@border-color-base: #e5e5e5;
+@border-radius-base: 4px;
+
+// Form
+@label-color: fade(@black, 85%);
+
+// Table
+@table-header-bg: @background-color-light;
+@table-header-color: @text-color-lesser;
+
+@number-font-family: DINAlternate-Bold; // 自定义数字字体
+
+// 输出给js使用
+:export {
+  primaryColor: @primary-color;
+  successColor: @success-color;
+  errorColor: @error-color;
+  warningColor: @warning-color;
+  cardRadius: @card-radius;
+}

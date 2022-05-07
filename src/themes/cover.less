@@ -1,0 +1,71 @@
+/**
+ * 公有库覆盖代码
+ */
+table {
+  .ant-table-tbody {
+    & > tr > td {
+      word-break: break-all;
+      // antd表格单元格内容中 使用a标签作为操作列时，自动处理边距
+      > a:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+    // antd表格单元格内容中 使用<Button>link模式时，自动处理边距
+    & td .ant-btn-link {
+      padding: 0;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// formItme中的button自动拉开间距
+.ant-form-item,
+.ant-legacy-form-item {
+  button.ant-btn + button.ant-btn {
+    margin-left: 10px;
+  }
+}
+
+.ant-spin-nested-loading,
+.ant-spin-container {
+  height: 100%;
+}
+.ant-spin-nested-loading > div > .ant-spin {
+  max-height: initial;
+}
+
+// flex下的Card组件自动撑起高度
+.ant-row-flex > .ant-col > .ant-card {
+  height: 100%;
+}
+
+.ant-descriptions-item {
+  .ant-descriptions-item-content {
+    vertical-align: top;
+  }
+}
+
+// 通过样式控制modal底部确定按钮在前面(注意antd版本变更是否有影响)
+// 所以, Modal如果使用自定义footer, 可以这样使用, 避免被全局样式影响
+// const footer = (
+//   <div>
+//     <Button type="primary" onClick={handleOk}>保存</Button>
+//     <Button type="primary" onClick={e => handleOk(e, true)}>测试</Button>
+//     <Button onClick={handleCancel}>取消</Button>
+//   </div>
+// );
+.ant-modal-footer,
+.ant-modal-confirm-btns {
+  display: flex;
+  flex-direction: row-reverse;
+  & > button {
+    margin-left: 8px;
+  }
+}
+
+.ant-card-head-title .ant-descriptions-row > th,
+.ant-card-head-title .ant-descriptions-row > td {
+  padding-bottom: 0;
+}
