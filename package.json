@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "check-ts": "tsc",
+    "check-ts:watch": "tsc -w",
     "dev": "cross-env NODE_ENV=development node build/webpack-dev-server.js",
     "analyze": "npm run build -- --analyze",
     "build": "cross-env NODE_ENV=production webpack --config  build/webpack.config.js",
