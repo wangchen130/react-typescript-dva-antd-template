@@ -1,5 +1,11 @@
 # react-typescript-dva-antd-template
 
+## 安装依赖
+
+```
+npm i --legacy-peer-deps
+```
+
 ## 启动
 
 ```
